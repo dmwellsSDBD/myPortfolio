@@ -1,0 +1,399 @@
+/* CSS Document */
+
+/****** Color Scheme **********************
+#BF0413 - Red
+#87C6CB - Lt Blue
+#F2762E - Orange
+#A66B49 - Lt Brown
+#401309 - Maroon
+******* Font Scheme  **********************
+font-family: 'Aclonica', sans-serif;
+font-family: 'Amatic SC', cursive;
+font-family: 'Henny Penny', cursive;
+******************************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Amatic+SC:wght@400;700&family=Henny+Penny&display=swap');
+
+img {
+    max-width: 100%;    
+    display: block;
+}
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+:root {
+  --card-height: 45vh;
+  --card-width: calc(var(--card-height) / 1.5);
+}
+
+
+/*
+body {
+  min-height: 100vh;
+  background: #212534;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  box-sizing: border-box;
+}
+*/
+
+
+.xmasCard {
+  background: #191c29;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: 1.5em;
+  color: rgb(88 199 250 / 0%);
+  cursor: pointer;
+	font-family: 'Henny Penny', cursive;
+    background-image: url("../images/christmasNight.jpg");
+    background-position: center;
+}
+
+.xmasCard:hover {
+  color: rgb(88 199 250 / 100%);
+  transition: color 1s;
+}
+.xmasCard:hover:before, .xmasCard:hover:after {
+  animation: none;
+  opacity: 0;
+}
+
+
+.xmasCard::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #87C6CB, #87C6ff, #401309);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+.xmasCard::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate)
+    , #87C6CB, #87C6ff, #401309);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+}
+
+/************* Lego Treehouse *******************************/
+.legoTH {
+  background: #191c29;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: 1.5em;
+  color: rgb(88 199 250 / 0%);
+  cursor: pointer;
+	font-family: 'Henny Penny', cursive;
+    background-image: url("../images/legoTreeHouse.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.legoTH:hover {
+  color: rgb(88 199 250 / 100%);
+  transition: color 1s;
+}
+.legoTH:hover:before, .legoTH:hover:after {
+  animation: none;
+  opacity: 0;
+}
+
+
+.legoTH::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #87C6CB, #87C6ff, #401309);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+.legoTH::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate)
+    , #87C6CB, #87C6ff, #401309);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+}
+/************* Exit Lego Treehouse *******************************/
+
+/************* Lego Pirate Ship *******************************/
+.legoPirate {
+  background: #191c29;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: 1.5em;
+  color: rgb(88 199 250 / 0%);
+  cursor: pointer;
+	font-family: 'Henny Penny', cursive;
+    background-image: url("../images/legoPirate.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.legoPirate:hover {
+  color: rgb(88 199 250 / 100%);
+  transition: color 1s;
+}
+.legoPirate:hover:before, .legoPirate:hover:after {
+  animation: none;
+  opacity: 0;
+}
+
+
+.legoPirate::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #87C6CB, #87C6ff, #401309);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+.legoPirate::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate)
+    , #87C6CB, #87C6ff, #401309);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+}
+/************* Exit Lego Pirate Ship *******************************/
+
+/************* Snare Drum *******************************/
+.snareDrum {
+  background: #191c29;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: 1.5em;
+  color: rgb(88 199 250 / 0%);
+  cursor: pointer;
+	font-family: 'Henny Penny', cursive;
+    background-image: url("../images/snareDrum.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.snareDrum:hover {
+  color: rgb(88 199 250 / 100%);
+  transition: color 1s;
+}
+.snareDrum:hover:before, .snareDrum:hover:after {
+  animation: none;
+  opacity: 0;
+}
+
+
+.snareDrum::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #87C6CB, #87C6ff, #401309);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+.snareDrum::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate)
+    , #87C6CB, #87C6ff, #401309);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+}
+/************* Exit Snare Drum *******************************/
+
+/************* Bodhran *******************************/
+.bodhran {
+  background: #191c29;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  font-size: 1.5em;
+  color: rgb(88 199 250 / 0%);
+  cursor: pointer;
+	font-family: 'Henny Penny', cursive;
+    background-image: url("../images/bodhran.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bodhran:hover {
+  color: rgb(88 199 250 / 100%);
+  transition: color 1s;
+}
+.bodhrad:hover:before, .bodhran:hover:after {
+  animation: none;
+  opacity: 0;
+}
+
+
+.bodhran::before {
+  content: "";
+  width: 104%;
+  height: 102%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #87C6CB, #87C6ff, #401309);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+.bodhran::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate)
+    , #87C6CB, #87C6ff, #401309);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+}
+/************* Exit Bodhran *******************************/
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+a {
+  color: #212534;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 2rem;
+}

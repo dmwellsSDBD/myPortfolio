@@ -1,0 +1,233 @@
+/* CSS Grid Document */
+body, div, h1, h2, h3, h4, h5, h6, footer {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: #233D4D;
+    color: #FFF;
+    font-size: 1.5em;
+}
+
+header {
+    padding: 2em 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.cssGrid {
+    display: block;
+    width: 100%;
+}
+
+#item1 {
+    background-color: #A1C181;
+    min-height: 300px;
+    padding: 5% 2% 3% 2%;
+}
+#item2 {
+    background-color: #619B8A;
+    min-height: 300px;
+    padding: 5% 2% 3% 2%;
+}
+#item3 {
+    background-color: #A1C181;
+    min-height: 300px;
+    padding: 5% 2% 3% 2%;
+}
+#item4 {
+    background-color: #619B8A;
+    min-height: 300px;
+    padding: 5% 2% 3% 2%;
+}
+#item5 {
+    background-color: #A1C181;
+    min-height: 300px;
+    padding: 5% 2% 3% 2%;
+}
+#item6 {
+    background-color: #619B8A;
+    min-height: 300px;
+    padding: 5% 2% 3% 2%;
+}
+#item7 {
+    background-color: #A1C181;
+    min-height: 300px;
+    padding: 5% 2% 3% 2%;
+}
+#item8 {
+    background-color: #619B8A;
+    min-height: 300px;
+    padding: 5% 2% 3% 2%;
+}
+#item9 {
+    background-color: #A1C181;
+    min-height: 300px;
+    padding: 5% 2% 3% 2%;
+}
+
+/* Start CSS Grid Code here */
+@supports (grid-area: auto) { 
+
+    /* Media Query Tablet */
+    @media screen and (min-width: 600px) {
+        
+        /* Apply CSS Grid */
+        .cssGrid {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 45% 45%;
+            grid-template-areas: 
+                "it1 it1"
+                "it2 it3"
+                "it4 it4"
+                "it5 it6"
+                "it7 it7"
+                "it8 it9";
+            grid-gap: 1% 1%;
+            margin: 10% 0;
+            justify-content: center;
+        }
+        
+        #item1 {
+            grid-area: it1;
+            background-color: #A1C181;
+            border: 2px #FE7F2D solid;
+        }
+        #item2 {
+            grid-area: it2;
+            background-color: #619B8A;
+            border: 2px #FE7F2D solid;
+        }
+        #item3 {
+            grid-area: it3;
+            background-color: #619B8A;
+            border: 2px #FE7F2D solid;
+        }
+        #item4 {
+            grid-area: it4;
+            background-color: #A1C181;
+            border: 2px #FE7F2D solid;
+        }
+        #item5 {
+            grid-area: it5;
+            background-color: #619B8A;
+            border: 2px #FE7F2D solid;
+        }
+        #item6 {
+            grid-area: it6;
+            background-color: #619B8A;
+            border: 2px #FE7F2D solid;
+        }
+        #item7 {
+            grid-area: it7;
+            background-color: #A1C181;
+            border: 2px #FE7F2D solid;
+        }
+        #item8 {
+            grid-area: it8;
+            background-color: #619B8A;
+            border: 2px #FE7F2D solid;
+        }
+        #item9 {
+            grid-area: it9;
+            background-color: #619B8A;
+            border: 2px #FE7F2D solid;
+        }
+        
+    } /* Closing Media Query Tablet */
+    
+    /* Media Query Desktop */
+    @media screen and (min-width: 1000px) {
+        /* Apply CSS Grid */
+        .cssGrid {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 30% 30% 30%;
+            grid-template-areas: 
+                "it1 it2 it3"
+                "it4 it5 it6"
+                "it7 it8 it9";
+            grid-gap: 1% 1%;
+            margin: 10% 0;
+            justify-content: center;
+        }
+        
+        /* Row 1 */
+        #item1 {
+            grid-area: it1;
+            background-color: #A1C181;
+            border: 2px #FE7F2D solid;
+        }
+        #item2 {
+            grid-area: it2;
+            background-color: #619B8A;
+            border: 2px #FE7F2D solid;
+        }
+        #item3 {
+            grid-area: it3;
+            background-color: #A1C181;
+            border: 2px #FE7F2D solid;
+        }
+        /* End Row 1 */
+        
+        /* Row 2 */
+        #item4 {
+            grid-area: it4;
+            background-color: #619B8A;
+            border: 2px #FE7F2D solid;
+        }
+        #item5 {
+            grid-area: it5;
+            background-color: #A1C181;
+            border: 2px #FE7F2D solid;
+        }
+        #item6 {
+            grid-area: it6;
+            background-color: #619B8A;
+            border: 2px #FE7F2D solid;
+        }
+        /* End Row 2 */
+        
+        /* Row 3 */
+        #item7 {
+            grid-area: it7;
+            background-color: #A1C181;
+            border: 2px #FE7F2D solid;
+        }
+        #item8 {
+            grid-area: it8;
+            background-color: #619B8A;
+            border: 2px #FE7F2D solid;
+        }
+        #item9 {
+            grid-area: it9;
+            background-color: #A1C181;
+            border: 2px #FE7F2D solid;
+        }
+        /* end Row 3 */
+    } /* Closing Media Query Desktop */
+    
+    /* Media Query Large Screen */
+    @media screen and (min-width: 1250px) {
+        .cssGrid {
+            width: 1250px;
+            margin: 0 auto 5% auto;
+        }
+    }
+}
+/* End CSS Grid Code here */
+
+footer {
+    width: 100%;
+    padding: 5% 0 10% 0;
+    font-size: .75em;
+    text-align: center;
+    background-color: #FE7F2D;
+    color: #233D4D;
+    
+}
