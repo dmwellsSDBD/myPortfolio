@@ -176,18 +176,9 @@ blockquote {
 
 .slantBlue {
     display: none;
-    position: absolute;
-    background-color:#00122E;
+    background:linear-gradient(to left top, #fff, #00122E);
     min-height: 200px;
-    width: 3000px;
-    left: -100px;
-    margin-top: -200px;
-    overflow-x: hidden;
-    z-index: 0;
-    ms-transform: rotate(-3deg); /* IE 9 */
-    -webkit-transform: rotate(-3deg); /* Chrome, Safari, Opera */
-    -moz-transform: rotate(-3deg); /*Mozilla */
-    transform: rotate(-3deg)
+    width: 100%;
 }
 
 .about {
@@ -250,10 +241,27 @@ blockquote {
     min-height:500px;
 }
 
+.web dl dt {
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.web dl dd {
+    font-size: 1.5em;
+    padding-left: 10%;
+}
+
 .web h2 {
     font-family: 'Maven Pro', sans-serif;
     font-size: 5em;
     text-align: left;
+}
+
+.web h3 {
+    padding-left: 0;
+    font-family: 'VT323', monospace;
+    font-size: 3em;
 }
 
 .port {
@@ -285,6 +293,10 @@ blockquote {
     border-radius: 25px;
 }
 
+.image-card a:hover {
+    background-color: #FFB92988;
+}
+
 .image-card:before {
   content: "";
   position: absolute;
@@ -308,5 +320,7 @@ blockquote {
 }
 
 footer {
-    min-height: 500px;
+    min-height: 300px;
+    padding: 5% 15%;
+    text-align: center;
 }

@@ -1,0 +1,327 @@
+/* CSS Document */
+/*
+Color Scheme:
+#B8BCC2 - Light Grey
+#2B7AFA - Blue
+#00122E - Dark Blue
+#7D786D - Dark Grey
+#FFB929 - Orange
+#8f2730 - Deep Red
+
+Font Scheme:
+font-family: 'Maven Pro', sans-serif;
+font-family: 'Shadows Into Light Two', cursive;
+font-family: 'Vollkorn', serif;
+font-family: 'VT323', monospace;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;900&family=Shadows+Into+Light+Two&family=VT323&family=Vollkorn&display=swap');
+
+/* CSS reset */
+:root {
+  --size: 150px;
+  --radius: calc(var(--size) * 20 / 100);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border:0;
+}
+
+body {
+    color: #fff;
+    box-sizing: border-box;
+}
+
+/************* Top Navigation ***********/
+
+nav {
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 0;
+  font-family: 'Vollkorn', serif;
+  background-color: #FFB929;
+}
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #00122E;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: #2B7AFA;
+}
+nav.fill ul li a {
+  position: relative;
+}
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #fff;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+nav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+nav.fill ul li a:hover {
+  color:#2B7AFA;
+  z-index: 1;
+}
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+
+/* Keyframes */
+@-webkit-keyframes fill {
+  0% {
+    width: 0%;
+    height: 1px;
+  }
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    background:#B8BCC2;
+  }
+}
+
+/*********** End Top Navigation **********/
+
+#container {
+    width: 100%;
+}
+
+header {
+    background-color: #8f2730aa;
+    background-image: url("../images/dmWells.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 600px;
+    padding: 50px 5%;
+}
+
+header h1 {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 5.5em;
+    margin-bottom: -15px;
+    margin-top: 100px;
+    padding-left: 35%;
+}
+
+header h2 {
+    font-family: 'Vollkorn', serif;
+    font-size: 2em;
+    margin-top: -50px;
+    padding-left: 40%;
+    color:#8f2730;
+    ms-transform: rotate(-3deg); /* IE 9 */
+    -webkit-transform: rotate(-3deg); /* Chrome, Safari, Opera */
+    -moz-transform: rotate(-3deg); /*Mozilla */
+    transform: rotate(-3deg);
+}
+
+blockquote {
+    padding-left: 35%;
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size: 12em;
+    ms-transform: rotate(-3deg); /* IE 9 */
+    -webkit-transform: rotate(-3deg); /* Chrome, Safari, Opera */
+    -moz-transform: rotate(-3deg); /*Mozilla */
+    transform: rotate(-3deg); 
+}
+
+.slantBlue {
+    display: none;
+    background:#8f2730;
+    min-height: 200px;
+    width: 100%;
+}
+
+.about {
+    background-color: #fff;
+    background-image: url("../images/bg-hero1.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    color:#00122E;
+    min-height: 500px;
+    padding: 50px 5%;
+}
+
+.about h2 {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 5em;
+    text-align: right;
+}
+
+.about p {
+    margin-top: 2em;
+    font-family: 'Vollkorn', serif;
+    font-size: 2.3em;
+    margin-bottom: 5%;
+}
+
+#btnTop {
+    margin-top: 2%;
+    margin-left: 35%;
+    background-color:#00122E;
+    color: #fff;
+    padding: .5em;
+    border-radius: 50px;
+    font-size: 1.5em;
+    
+}
+
+.about a {
+    text-decoration: none;
+}
+
+.about #btn:hover {
+    color:#2B7AFA;
+    background-color:#7D786D;
+}
+
+.break {
+    background-color:#8f2730;
+    color:#2B7AFA;
+    min-height: 50px;
+    font-family: 'Shadows Into Light Two', cursive;
+}
+
+.web {
+    padding: 50px 5%;
+    background-color:#00122Eaa;
+    background-image: url("../images/IMG-5266.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    color:#FFB929;
+    min-height:500px;
+}
+
+.web dl dt {
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.web dl dd {
+    font-size: 1.5em;
+    padding-left: 10%;
+}
+
+.web h2 {
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 5em;
+    text-align: left;
+}
+
+.web h3 {
+    padding-left: 0;
+    font-family: 'VT323', monospace;
+    font-size: 3em;
+}
+
+.port {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 25vh;
+  width: 65%;
+  margin: auto;
+}
+
+.image-card {
+  width: var(--size);
+  height: var(--size);
+  border-radius: var(--radius);
+  position: relative;
+  background-size: cover;
+  margin: calc(var(--size) * 20 / 100);
+}
+
+.image-card a {
+/*    background-color: red;*/
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    height: 90%;
+    width: 90%;
+    border-radius: 25px;
+}
+
+.image-card a:hover {
+    background-color: #FFB92988;
+}
+
+.image-card:before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  background-image: inherit;
+  background-size: cover;
+  border-radius: var(--radius);
+  z-index: -1;
+  filter: blur(12px);
+  opacity: 0.6;
+  left: 50%;
+  transform: translate(-50%, 10%);
+}
+
+.music {
+    display: none;
+    background-color:#FFB929;
+    color:#00122E;
+    min-height: 500px;
+}
+
+footer {
+    background-color: #8f2730;
+    min-height: 300px;
+    padding: 5% 15%;
+    text-align: center;
+}
